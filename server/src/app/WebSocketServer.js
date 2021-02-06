@@ -15,18 +15,13 @@ module.exports = class WebSocketServer {
 
     setupServer = () => {
         //Yeni bir WebSocket sunucusu yarat
-        const wss = new ws.Server({ port: process.env.WSS_PORT, ...this.options });
+        const wss = new ws.Server({ ...this.options });
 
         //Sunucu hatalarını yakala
         wss.on("error", (error) => console.log(error));
 
         //Yeni bir baglanti geldiginde bu baglantiyi yakala ve işle
         wss.on("connection", this.handleConnection);
-
-        //Sunucunun başladığına dair bilgi ver
-        console.log(
-            ` > WebSocket sunucusu ws://localhost:${process.env.WSS_PORT} adresinde calisiyor.`
-        );
     };
 
     /**
