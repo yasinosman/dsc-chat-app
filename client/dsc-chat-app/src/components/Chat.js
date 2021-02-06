@@ -31,7 +31,7 @@ export default class Chat extends Component {
 
     setupWebSocket = () => {
         try {
-            const socket = new WebSocket("ws://dsc-chat-server.herokuapp.com");
+            const socket = new WebSocket("wss://dsc-chat-server.herokuapp.com");
             socket.onerror = (error) => {
                 console.log(error);
             };
