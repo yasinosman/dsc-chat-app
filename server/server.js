@@ -1,13 +1,14 @@
 const Database = require("./src/data/models/Database");
 const WebSocketServer = require("./src/app/WebSocketServer");
+const express = require("express");
 
 class Server {
     constructor() {
         //Connect to database
         this.initDatabase();
 
-        //Initialize websocket server
-        this.initWebSocketServer();
+        //Initialize server
+        this.initServer();
     }
 
     initDatabase = () => {
@@ -16,8 +17,11 @@ class Server {
             .catch((error) => console.log(error));
     };
 
-    initWebSocketServer = () => {
-        new WebSocketServer();
+    initServer = () => {
+        const PORT = process.env.PORT || 3000;
+        const server = express().listen(PORT, () => console.log(`Listening on port ${PORT}`));
+
+        new WebSocketServer({ server });
     };
 }
 

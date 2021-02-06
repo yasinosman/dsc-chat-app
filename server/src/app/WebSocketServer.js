@@ -4,7 +4,8 @@ const WebSocketUser = require("./WebSocketUser");
 const MessageController = require("../data/controllers/MessageController");
 
 module.exports = class WebSocketServer {
-    constructor() {
+    constructor(options) {
+        this.options = options;
         //WebSocket sunucusuna bağlı olan kullanıcıların listesini tut
         this.users = [];
 
@@ -14,7 +15,7 @@ module.exports = class WebSocketServer {
 
     setupServer = () => {
         //Yeni bir WebSocket sunucusu yarat
-        const wss = new ws.Server({ port: process.env.WSS_PORT });
+        const wss = new ws.Server({ port: process.env.WSS_PORT, ...this.options });
 
         //Sunucu hatalarını yakala
         wss.on("error", (error) => console.log(error));
