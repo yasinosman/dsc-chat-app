@@ -1,0 +1,25 @@
+.chat__header {
+    width: 100%;
+    height: 8%;
+    background-color: var(--header-background);
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.chat__header h1 {
+    font-size: 24px;
+}
+
+.chat__header p {
+    color: var(--header-secondary-text-color);
+    font-size: 18px;
+}
+
+.chat__header h1,
+.chat__header p {
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+}

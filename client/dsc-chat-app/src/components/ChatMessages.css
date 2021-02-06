@@ -1,0 +1,44 @@
+.chat__messages {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-background);
+    width: 100%;
+    height: 85vh;
+    min-height: 510px;
+    overflow-y: auto;
+}
+
+.chat__message {
+    width: max-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5%;
+}
+
+.chat__message--received {
+    background-color: var(--received-message-background);
+}
+
+.chat__message--sent {
+    background-color: var(--sent-message-background);
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+.chat__message__from {
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.chat__message__content {
+    padding-bottom: 5px;
+}
+
+.chat__message__at {
+    float: right;
+    color: var(--header-secondary-text-color);
+}

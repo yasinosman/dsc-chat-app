@@ -1,0 +1,16 @@
+.chat__form {
+    width: 100%;
+    height: 5vh;
+    background-color: var(--header-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat__form__input {
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+    border: none;
+    padding-left: 10px;
+}

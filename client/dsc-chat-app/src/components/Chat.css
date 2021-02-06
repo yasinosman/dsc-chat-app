@@ -1,0 +1,28 @@
+:root {
+    --header-background: rgba(237, 237, 237, 255);
+    --header-secondary-text-color: rgba(171, 171, 171, 255);
+    --main-background: rgb(222, 213, 205);
+    --received-message-background: rgba(255, 255, 255, 255);
+    --sent-message-background: rgba(204, 255, 199, 255);
+}
+
+.chat {
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 300px;
+    min-height: 600px;
+    max-width: 900px;
+}
+
+.chat__notification {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header-background);
+}
